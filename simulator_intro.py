@@ -59,6 +59,9 @@ class FixedWingSimulation:
         # Simple pitch response to elevator deflection
         self.pitch += (elevator_deflection * 0.5) * dt
 
+        max_pitch_rad = np.radians(30.0)
+        self.pitch = np.clip(self.pitch, -max_pitch_rad, max_pitch_rad)
+
 # --- RUNNING AN ACTIVE SIMULATION LOOP ---
 sim = FixedWingSimulation()
 dt = 0.02  # 20ms execution step (Matches a standard 50Hz autopilot loop)
