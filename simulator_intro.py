@@ -79,3 +79,5 @@ while time < 5.0:  # Simulate the first 5 seconds of flight
     if int(time / dt) % 25 == 0:  # Print updates every 0.5 seconds
         airspeed = np.linalg.norm(sim.velocity)
         print(f"{time:7.2f} | {sim.position[0]:13.1f} | {sim.position[2]:13.1f} | {airspeed:12.1f}")
+
+# End of flight simulation pipeline tracking
