@@ -1,3 +1,4 @@
+# ATOMRC Penguin 6-DoF Flight Simulation
 import numpy as np
 
 class FixedWingSimulation:
